@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Portfolio Clémence</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- GSAP CDN -->
+   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <!-- Menu / Header -->
+  <header class="main-header">
+    <div class="header-flex">
+      <div class="logo">
+        <img src="img/logo.png" alt="LOGO">
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="img/HERO.png" alt="hero" class="hero-cover">
+  </section>
+
+  <!-- Présentation -->
+  <section id="apropos" class="about-image container">
+    <img src="img/presentation.png" alt="présentation">
+    <img src="img/enchantee.png" alt="enchantée">
+  </section>
+
+  <!-- Portfolio -->
+<section id="portfolio" class="portfolio-section">
+  <h2 class="portfolio-title">PORTFOLIO</h2>
+  
+  <div class="box">
+    <span style="--i:1;"><img src="img/couv_domaine.png" alt="Projet 1"><div class="overlay">Identité visuelle <br>& web design <br> projet fictif</div></span>
+    <span style="--i:2;"><img src="img/COUV-HM.png" alt="Projet 2"><div class="overlay">Identité visuelle <br> & Web design <br> projet fictif</div></span>
+    <span style="--i:3;"><img src="img/couv_repetto.png" alt="Projet 3"><div class="overlay">Identité visuelle <br> projet de fin d'étude</div></span>
+    <span style="--i:4;"><img src="img/couv_pounet.png" alt="Projet 4"><div class="overlay">Identité visuelle <br> projet fictif</div></span>
+    <span style="--i:5;"><img src="img/couv_wave.png" alt="Projet 5"><div class="overlay">Identité visuelle<br> projet fictif</div></span>
+    <span style="--i:6;"><img src="img/couv_edm.png" alt="Projet 6"><div class="overlay">Identité visuelle & édition<br> projet réel</div></span>
+    <span style="--i:7;"><img src="img/couv_livre.png" alt="Projet 7"><div class="overlay">Identité visuelle & édition<br> projet fictif</div></span>
+    <span style="--i:8;"><img src="img/couv_cartes.png" alt="Projet 8"><div class="overlay">Illustration<br>projet fictif</div></span>
+    <span style="--i:9;"><img src="img/couv_boom.png" alt="Projet 9"><div class="overlay">Illustration <br> projet réel</div></span>
+    <span style="--i:10;"><img src="img/couv_vinyl.png" alt="Projet 1O"><div class="overlay">Montage photo <br> projet fictif</div></span>
+    <span style="--i:11;"><img src="img/couv_rando.png" alt="Projet 11"><div class="overlay">Montage photo<br> projet fictif</div></span>
+    <span style="--i:12;"><img src="img/couv_dior.png" alt="Projet 12"><div class="overlay">Montage photo<br>projet fictif</div></span>
+    <span style="--i:13;"><img src="img/couv_leopard.png" alt="Projet 13"><div class="overlay">Montage photo<br> projet fictif</div></span>
+    <span style="--i:14;"><img src="img/couv_cata.png" alt="Projet 14"><div class="overlay">Édition<br>projet réel</div></span>
+    <span style="--i:15;"><img src="img/couv_pressbook.png" alt="Projet 15"><div class="overlay">Édition <br>projet réel</div></span>
+    <span style="--i:16;"><img src="img/couv_typo.png" alt="Projet 16"><div class="overlay">Typographie <br> projet fictif</div></span>
+  </div>
+  
+</section>
+
+ 
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+  <img src="img/CONATCT2.png" alt="contact">
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Clémence Cassinado. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+  <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modal-images"></div>
+        <button class="close-arrow" aria-label="Fermer"&#8592;>
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#c8d9e6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+        </button>
+
+  </div>
+</div>
+
+
+</body>
+</html>
