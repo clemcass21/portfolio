@@ -339,11 +339,11 @@ footer {
 .portfolio-section {
   overflow-x: hidden;
   position: relative;
+  height: auto;
 }
   .box {
-    width: 220px;
-    height: 220px;
-    transform: scale(0.8);
+    width: 150px;
+    height: 150px;
     animation: animate 50s linear infinite;
   }
 
@@ -384,6 +384,7 @@ footer {
 .portfolio-section {
   overflow-x: hidden;
   position: relative;
+  height: auto;
 }
 
   .portfolio-title {
