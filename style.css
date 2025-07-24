@@ -386,7 +386,10 @@ footer {
   .box {
     width: 180px;
     height: 180px;
-    transform: scale(0.7);
+    transform: scale(1);
+  }
+  .box span {
+    transform: rotateY(calc(var(--i) * 22.5deg)) translateZ(500px);
   }
 
   .box span .overlay {
@@ -402,27 +405,42 @@ footer {
   footer {
     font-size: 0.8em;
   }
-}
+ }
+
+
+
 /* 🌟 Mobile (jusqu'à 480px) */
 @media (max-width: 480px) {
   .menu li a {
     font-size: 20px;
   }   
+
+  .portfolio-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1em; /* ajouter du padding pour l'alignement */
+  }
   .portfolio-title {
     font-size: 30px;
     margin-bottom: 30px;
     margin-top: 30px;
   }
+
   .box {
     width: 150px;
     height: 150px;
-    transform: scale(0.6);
+    transform: scale(1);
   }
 
   .box span .overlay {
     font-size: 0.9em;
     padding: 0.5em;
   }
+
+    .box span {
+    transform: rotateY(calc(var(--i) * 22.5deg)) translateZ(350px);
+  }
+
   .hero {
     height: auto;
     margin-top: 50px;
@@ -441,5 +459,5 @@ footer {
   footer {
     font-size: 0.7em;
   }
-}         
+}        
 
