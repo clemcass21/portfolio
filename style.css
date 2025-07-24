@@ -325,133 +325,121 @@ footer {
 
 /* ----- RESPONSIVE ----- */
 
+/* ---------- RESPONSIVE DESIGN ---------- */
 
-
-/* --- Responsive TABLETTE --- */
+/* 🌐 Tablette (jusqu'à 1024px) */
 @media (max-width: 1024px) {
-
-  .hero {
-    height: 400px;
+  .menu li a {
+    font-size: 28px;
   }
 
   .portfolio-title {
-    font-size: 80px;
+    font-size: 60px;
+    margin-bottom: 100px;
   }
 
-   .portfolio-section {
-    height: auto;
-    gap: 2em; /* espace entre les box sur tablette */
-  }
   .box {
     width: 220px;
     height: 220px;
-    margin: 0 auto;
+    transform: scale(0.8);
   }
-  .box span {
-    transform: rotateY(calc(var(--i)*22.5deg)) translateZ(350px); /* distance adaptée */
+
+  .box span .overlay {
+    font-size: 1.2em;
+    padding: 0.8em;
   }
 }
-  .about-image img,
-  .contact img {
-    max-width: 90vw;
-  }
-  
 
-
-
-/* --- Responsive MOBILE --- */
-
-
-@media (max-width: 600px) {
-  /* Header et menu */
-  .main-header,
+/* 📱 Mobile (jusqu'à 768px) */
+@media (max-width: 768px) {
   .header-flex {
     flex-direction: column;
     height: auto;
     gap: 1em;
-    padding: 1em 0.5em;
+    padding: 1em;
   }
-  .logo img {
-    height: 20px;
-    margin-bottom: 1em;
-  }
+
   .menu {
-    flex-direction: column;
-    gap: 0.5em;
-  }
-  .menu li a {
-    font-size: 1.2em;
-  }
-
-  /* Hero */
-  .hero {
-    height: 220px;
-    padding: 0;
-  }
-  .hero-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
-  }
-
-  /* Présentation */
-  .about-image {
-    padding: 0;
-    margin: 1em 0;
     flex-direction: column;
     gap: 1em;
   }
-  .about-image img {
-    max-width: 98vw;
+
+  .menu li a {
+    font-size: 24px;
+  }
+
+  .hero {
     height: auto;
-    margin: 0 auto;
-    display: block;
+    margin-top: 100px;
   }
 
-  /* Portfolio */
   .portfolio-title {
-    font-size: 2.2em;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
-    line-height: 1;
+    font-size: 40px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
-  .portfolio-section {
 
-    padding: 1em 0;
-    gap: 1.5em;
+  .about-image img {
+    width: 100%;
   }
+
   .box {
+    width: 180px;
+    height: 180px;
+    transform: scale(0.7);
+  }
+
+  .box span .overlay {
+    font-size: 1em;
+    padding: 0.6em;
+  }
+
+  .close-arrow {
     width: 50px;
     height: 50px;
-    margin: 0 auto;
-  }
-  .box span img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .box span {
-    transform: rotateY(calc(var(--i)*22.5deg)) translateZ(150px);
   }
 
-  .box span img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Contact */
-  .contact img {
-    max-width: 98vw;
-    height: auto;
-    margin: 1em auto;
-    display: block;
-  }
-
-  /* Footer */
   footer {
-    font-size: 0.9em;
-    padding: 1em 0.5em;
+    font-size: 0.8em;
   }
 }
+/* 🌟 Mobile (jusqu'à 480px) */
+@media (max-width: 480px) {
+  .menu li a {
+    font-size: 20px;
+  }   
+  .portfolio-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .box {
+    width: 150px;
+    height: 150px;
+    transform: scale(0.6);
+  }
+
+  .box span .overlay {
+    font-size: 0.9em;
+    padding: 0.5em;
+  }
+  .hero {
+    height: auto;
+    margin-top: 50px;
+  }
+  .hero-cover {
+    height: 300px; /* ajuster la hauteur de l'image hero pour mobile */
+  }
+  .about-image img {
+    width: 100%;
+  }
+  .close-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+  }                     
+  footer {
+    font-size: 0.7em;
+  }
+}         
+
