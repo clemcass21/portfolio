@@ -337,11 +337,19 @@ footer {
     font-size: 60px;
     margin-bottom: 100px;
   }
-
+.portfolio-section {
+  overflow-x: hidden;
+  position: relative;
+}
   .box {
     width: 220px;
     height: 220px;
     transform: scale(0.8);
+    animation: animate 50s linear infinite;
+  }
+
+  .box span {
+    transform: rotateY(calc(var(--i) * 22.5deg)) translateZ(350px);
   }
 
   .box span .overlay {
@@ -369,9 +377,13 @@ footer {
   }
 
   .hero {
-    height: auto;
+    height: 500px;
     margin-top: 100px;
   }
+.portfolio-section {
+  overflow-x: hidden;
+  position: relative;
+}
 
   .portfolio-title {
     font-size: 40px;
@@ -415,11 +427,12 @@ footer {
     font-size: 20px;
   }   
 
+ 
   .portfolio-section {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1em; /* ajouter du padding pour l'alignement */
-  }
+  overflow-x: hidden;
+  position: relative;
+}
+
   .portfolio-title {
     font-size: 30px;
     margin-bottom: 30px;
@@ -430,6 +443,7 @@ footer {
     width: 150px;
     height: 150px;
     transform: scale(1);
+    animation: animate 50s linear infinite;
   }
 
   .box span .overlay {
@@ -438,11 +452,11 @@ footer {
   }
 
     .box span {
-    transform: rotateY(calc(var(--i) * 22.5deg)) translateZ(350px);
+    transform: rotateY(calc(var(--i) * 22.5deg)) translateZ(300px);
   }
 
   .hero {
-    height: auto;
+    height: 300px;
     margin-top: 50px;
   }
   .hero-cover {
