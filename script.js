@@ -18,25 +18,6 @@ closeArrow.addEventListener("click", () => {
     }
   });
 
-  const projects = {
-    1: ['img/domaine.png'],
-    2: ['img/hm.png'],
-    3: ['img/repetto.png'],
-    4: ['img/pounet.png'],
-    5: ['img/wave.png'],
-    6: ['img/edm.png'],
-    7: ['img/supert.png'],
-    8: ['img/jeu.png'],
-    9: ['img/boom.png'],
-    10: ['img/disque.png'],
-    11: ['img/randonneur.png'],
-    12: ['img/dior.png'],
-    13: ['img/leopard.png'],
-    14: ['img/oxy.png'],
-    15: ['img/pressbook.png'],
-    16: ['img/typo.png']
-  };
-
   const pro = [
     {
       overlay: { img: 'img/couv_domaine.png', title: 'Identité visuelle<br>& web design<br>projet fictif' },
@@ -131,14 +112,12 @@ closeArrow.addEventListener("click", () => {
 
 
 
-  document.querySelectorAll('.box span').forEach((span, idx) => {
+  document.querySelectorAll('.box > div').forEach((span, idx) => {
     span.addEventListener('click', () => {
       modalImages.innerHTML = '';
-      (projects[idx+1] || []).forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        modalImages.appendChild(img);
-      });
+      const img = document.createElement('img');
+      img.src = pro[idx].modal.img;
+      modalImages.appendChild(img);
       modal.style.display = 'flex';
     });
   });
