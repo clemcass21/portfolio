@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
   <!-- GSAP CDN -->
-   <script src="script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
@@ -17,6 +16,11 @@
     <div class="header-flex">
       <div class="logo">
         <img src="img/logo.png" alt="LOGO">
+      </div>
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
       <nav>
         <ul class="menu">
@@ -58,22 +62,20 @@
     <p>&copy; 2025 Clémence Cassinado. Tous droits réservés.</p>
   </footer>
 
-  <script src="script.js"></script>
-
-
   <div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div id="modal-images"></div>
-        <button class="close-arrow" aria-label="Fermer"&#8592;>
-          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#c8d9e6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="15 18 9 12 15 6"></polyline>
-    </svg>
-        </button>
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modal-images"></div>
+      <button class="close-arrow" aria-label="Fermer"&#8592;>
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#c8d9e6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
 
+    </div>
   </div>
-</div>
 
 
+  <script src="script.js"></script>
 </body>
 </html>

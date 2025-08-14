@@ -90,6 +90,36 @@ h1, h2, h3 {
   color: #c8d9e6; /* couleur d'hover */
 }
 
+/* ----- BURGER MENU ----- */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 6px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -6px);
+}
+
 /* ----- HERO ----- */
 .hero {
   height: 1300px;
@@ -286,7 +316,7 @@ footer {
   position: absolute;
   top: 1em; right: 1em;
   font-size: 2em;
-  color: none;
+  color: white;
   cursor: pointer;
 }
 
@@ -331,11 +361,42 @@ footer {
 
 /* 🌐 Tablettes (max 1024px) */
 @media (max-width: 1024px) {
-  .header-flex {
+  .burger {
+    display: flex;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    transition: right 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  nav.open {
+    right: 0;
+  }
+
+  .menu {
     flex-direction: column;
-    height: auto;
-    gap: 1em;
-    padding: 1em;
+    gap: 2em;
+    text-align: center;
+  }
+
+  .menu li a {
+    font-size: 24px;
+    color: black;
+  }
+
+  .menu li a:hover {
+    color: #c8d9e6;
   }
 
   .portfolio-section {
@@ -378,6 +439,20 @@ footer {
 
   footer {
     font-size: 0.9em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .burger {
+    display: none !important;
+  }
+
+  nav {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    background: none !important;
+    backdrop-filter: none !important;
   }
 }
 
@@ -444,4 +519,9 @@ footer {
   }
 }
 
-
+@media (max-width: 650px) {
+  .header-flex {
+    flex-direction: column;
+    gap: 1em;
+  }
+}

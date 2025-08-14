@@ -129,15 +129,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('nav');
 
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    nav.classList.toggle('open');
-  });
+  if (burger && nav) {
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      nav.classList.toggle('open');
 
-  document.querySelectorAll('.menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      burger.classList.remove('active');
-      nav.classList.remove('open');
+      console.log(burger.classList);
     });
-  });
+
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('active');
+        nav.classList.remove('open');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!burger.contains(e.target) && !nav.contains(e.target)) {
+        burger.classList.remove('active');
+        nav.classList.remove('open');
+      }
+    });
+  } else { console.error('Missing elements');}
 });
