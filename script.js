@@ -121,11 +121,7 @@ closeArrow.addEventListener("click", () => {
       modal.style.display = 'flex';
     });
   });
-});
 
-
-
-document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('nav');
 
@@ -148,7 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!burger.contains(e.target) && !nav.contains(e.target)) {
         burger.classList.remove('active');
         nav.classList.remove('open');
+      } else if (!modal.contains(e.target)) {
+        modal.modal.style.display = "none";
       }
     });
-  } else { console.error('Missing elements');}
+  }
 });
